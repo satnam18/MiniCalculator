@@ -12,6 +12,10 @@ function multiply(number1, number2) {
   return (number1 * number2);
 }
 
+function divide(number1, number2) {
+  return number2 !== 0 ? number1 / number2 : 'Denominator can not be zero';
+}
+
 do {
   console.log(' \n \n Welocme to Mini calculator');
   console.log(' \nEnter the 2 values you want to have operations on :');
@@ -28,7 +32,10 @@ do {
     result = subtract(firstNumber, secondNumber);
   } else if (choice === 3) {
     result = multiply(firstNumber, secondNumber);
+  } else if (choice === 4) {
+    result = divide(firstNumber, secondNumber);
   }
+
 
   console.log('​The result after the operatiion is : ', result);
 } while (true);
