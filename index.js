@@ -3,6 +3,12 @@ const readline = require('readline-sync');
 function add(number1, number2) {
   return (number1 + number2);
 }
+
+function subtract(number1, number2) {
+  return number1 > number2 ? number1 - number2 : number2 - number1;
+}
+
+
 do {
   console.log(' \n \n Welocme to Mini calculator');
   console.log(' \nEnter the 2 values you want to have operations on :');
@@ -15,6 +21,9 @@ do {
 
   if (choice === 1) {
     result = add(firstNumber, secondNumber);
+  } else if (choice === 2) {
+    result = subtract(firstNumber, secondNumber);
   }
+
   console.log('​The result after the operatiion is : ', result);
 } while (true);
